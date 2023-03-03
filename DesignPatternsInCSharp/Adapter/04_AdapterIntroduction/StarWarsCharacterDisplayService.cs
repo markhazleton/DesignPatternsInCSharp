@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,7 +13,7 @@ namespace DesignPatternsInCSharp.Adapter.AdapterIntroduction
             {
                 string filePath = @"Adapter/People.json";
                 characterSource = new CharacterFileSourceAdapter(filePath);
-            } 
+            }
             else if (source == CharacterSource.Api)
             {
                 characterSource = new StarWarsApiCharacterSourceAdapter();
@@ -23,7 +22,7 @@ namespace DesignPatternsInCSharp.Adapter.AdapterIntroduction
             {
                 throw new Exception("Invalid character source");
             }
-            
+
             var people = await characterSource.GetCharacters();
 
             var sb = new StringBuilder();

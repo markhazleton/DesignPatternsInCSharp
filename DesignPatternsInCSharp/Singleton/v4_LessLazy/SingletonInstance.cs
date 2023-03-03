@@ -11,7 +11,7 @@ namespace DesignPatternsInCSharp.Singleton.v4
         public SingletonInstance(ITestOutputHelper output)
         {
             _output = output;
-            
+
             // This doesn't work with a static readonly field
             //SingletonTestHelpers.Reset(typeof(Singleton));
 

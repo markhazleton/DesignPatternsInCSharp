@@ -10,7 +10,7 @@ namespace DesignPatternsInCSharp.Proxy.ProtectiveProxy
 
         internal override void UpdateName(string newName, User user)
         {
-            if(user.Role != Roles.Author)
+            if (user.Role != Roles.Author)
             {
                 throw new UnauthorizedAccessException("Cannot update name unless in Author role.");
             }

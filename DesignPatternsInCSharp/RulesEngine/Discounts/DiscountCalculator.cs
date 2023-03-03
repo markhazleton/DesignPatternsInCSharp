@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics.Contracts;
 using System.Linq;
 
 namespace DesignPatternsInCSharp.RulesEngine.Discounts
@@ -102,7 +100,7 @@ namespace DesignPatternsInCSharp.RulesEngine.Discounts
         public decimal CalculateDiscountPercentage(Customer customer)
         {
             decimal discount = 0m;
-            foreach(var rule in _rules)
+            foreach (var rule in _rules)
             {
                 discount = Math.Max(discount, rule.CalculateDiscount(customer, discount));
             }

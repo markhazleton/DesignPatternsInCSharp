@@ -20,7 +20,7 @@ namespace DesignPatternsInCSharp.Adapter.TwoProviderClasses
                 string filePath = @"Adapter/People.json";
                 var characterSource = new CharacterFileSource();
                 people = await characterSource.GetCharactersFromFile(filePath);
-            } 
+            }
             else if (source == CharacterSource.Api)
             {
                 var swapiSource = new StarWarsApi();

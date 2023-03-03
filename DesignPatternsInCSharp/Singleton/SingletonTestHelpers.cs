@@ -11,7 +11,7 @@ namespace DesignPatternsInCSharp.Singleton
             info.SetValue(null, null);
         }
 
-        public static T GetPrivateStaticInstance<T>() where T:class
+        public static T GetPrivateStaticInstance<T>() where T : class
         {
             Type type = typeof(T);
             FieldInfo info = type.GetField("_instance", BindingFlags.NonPublic | BindingFlags.Static);

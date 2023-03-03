@@ -16,7 +16,7 @@ namespace DesignPatternsInCSharp.TemplateMethod
         {
             var logger = new LoggerAdapter();
             var service = new PieBakingService(logger);
-            
+
             var pie = service.Prepare();
 
             Assert.NotNull(pie);

@@ -17,11 +17,11 @@ namespace DesignPatternsInCSharp.Proxy.SmartProxy
             }
             catch (IOException)
             {
-                if(_openStreams.ContainsKey(path))
+                if (_openStreams.ContainsKey(path))
                 {
                     var stream = _openStreams[path];
 
-                    if(stream != null && stream.CanWrite)
+                    if (stream != null && stream.CanWrite)
                     {
                         return stream;
                     }

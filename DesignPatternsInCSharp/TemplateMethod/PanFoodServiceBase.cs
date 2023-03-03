@@ -1,6 +1,6 @@
 ﻿namespace DesignPatternsInCSharp.TemplateMethod
 {
-    public abstract class PanFoodServiceBase<T> where T:PanFood, new()
+    public abstract class PanFoodServiceBase<T> where T : PanFood, new()
     {
         protected readonly LoggerAdapter _logger;
         protected T _item;

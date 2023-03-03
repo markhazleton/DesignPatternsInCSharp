@@ -71,7 +71,7 @@ namespace DesignPatternsInCSharp.Memento.Tests
 
         [Fact]
         public void SetsGameIsOverTrueAndResultLostWhenGuessesLeftReaches0()
-        {               
+        {
             _game.Guess('A');
             _game.Guess('B');
             _game.Guess('C');

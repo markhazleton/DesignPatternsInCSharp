@@ -44,7 +44,7 @@ namespace DesignPatternsInCSharp.KataWithPatterns
         [InlineData(1)]
         [InlineData(0)]
         public void DoesNotReduceQualityBelowZero(int initialQuality)
-        { 
+        {
             _item.Quality = initialQuality;
             _service.UpdateQuality();
 

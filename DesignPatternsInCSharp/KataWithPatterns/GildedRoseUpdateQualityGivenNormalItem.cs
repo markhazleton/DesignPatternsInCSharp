@@ -42,7 +42,7 @@ namespace DesignPatternsInCSharp.KataWithPatterns
 
         [Fact]
         public void DoesNotReduceQualityBelowZero()
-        { 
+        {
             _item.Quality = 0;
             _service.UpdateQuality();
 

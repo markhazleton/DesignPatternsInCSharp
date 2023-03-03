@@ -46,9 +46,9 @@ namespace HangmanGameApp
                 var entry = char.ToUpperInvariant(Console.ReadKey().KeyChar);
 
 #if SupportUndo
-                if(entry == '-')
+                if (entry == '-')
                 {
-                    if(gameHistory.Count > 1)
+                    if (gameHistory.Count > 1)
                     {
                         gameHistory.Pop();
                         game.ResumeFrom(gameHistory.Peek());

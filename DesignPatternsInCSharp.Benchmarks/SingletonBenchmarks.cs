@@ -1,8 +1,9 @@
-﻿using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
+﻿
 using BenchmarkDotNet.Attributes;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+
+using System.Threading.Tasks;
 
 namespace DesignPatternsInCSharp.Benchmarks
 {
@@ -20,9 +21,9 @@ namespace DesignPatternsInCSharp.Benchmarks
         {
             _parallelOptions =
                 new ParallelOptions()
-                    {
-                        MaxDegreeOfParallelism = 3,
-                    };
+                {
+                    MaxDegreeOfParallelism = 3,
+                };
             _strings = new List<string>() { "one", "two", "three" };
         }
 

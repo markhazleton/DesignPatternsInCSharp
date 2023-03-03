@@ -23,7 +23,7 @@ namespace DesignPatternsInCSharp.RulesEngine.DiscountsShortCircuit
 
         public decimal CalculateDiscount(Customer customer, decimal currentDiscount)
         {
-            if(customer.Referrer != null)
+            if (customer.Referrer != null)
             {
                 // here we can either duplicate the logic in FirstTimeCustomerRule or use that rule
                 bool firstTimeCustomer = new FirstTimeCustomerRule().CalculateDiscount(customer, 0) > 0;
@@ -131,12 +131,12 @@ namespace DesignPatternsInCSharp.RulesEngine.DiscountsShortCircuit
         public decimal CalculateDiscountPercentage(Customer customer)
         {
             decimal discount = 0m;
-            foreach(var priorityRule in _priorityRules.OrderBy(pr => pr.PriorityLowestExecutesFirst))
+            foreach (var priorityRule in _priorityRules.OrderBy(pr => pr.PriorityLowestExecutesFirst))
             {
                 var result = priorityRule.CalculateDiscount(customer, 0);
                 if (result > 0) return result;
             }
-            foreach(var rule in _rules)
+            foreach (var rule in _rules)
             {
                 discount = Math.Max(discount, rule.CalculateDiscount(customer, discount));
             }

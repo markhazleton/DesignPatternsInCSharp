@@ -11,7 +11,7 @@ namespace DesignPatternsInCSharp.Proxy.VirtualProxy
 
         public virtual IEnumerable<ExpensiveEntity> HomeEntities { get; protected set; }
         public virtual IEnumerable<ExpensiveEntity> AwayEntities { get; protected set; }
-        
+
         protected ExpensiveToFullyLoad()
         {
             History.Add("Constructor called.");

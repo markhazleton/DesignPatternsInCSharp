@@ -23,11 +23,11 @@ namespace DesignPatternsInCSharp.Adapter.TwoProviders
             {
                 string filePath = @"Adapter/People.json";
                 people = JsonConvert.DeserializeObject<List<Person>>(await File.ReadAllTextAsync(filePath));
-            } 
+            }
             else if (source == CharacterSource.Api)
             {
                 var handler = new HttpClientHandler() { AllowAutoRedirect = true };
-                
+
                 using (var client = new HttpClient(handler))
                 {
 
@@ -35,7 +35,7 @@ namespace DesignPatternsInCSharp.Adapter.TwoProviders
                     string result = await client.GetStringAsync(url);
                     people = JsonConvert.DeserializeObject<ApiResult<Person>>(result).Results;
                 }
-            } 
+            }
             else
             {
                 throw new Exception("Invalid character source");

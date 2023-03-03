@@ -43,7 +43,7 @@ namespace DesignPatternsInCSharp.Memento
                 return;
             }
 
-            if(GuessesRemaining <= 0)
+            if (GuessesRemaining <= 0)
             {
                 Result = GameResult.Lost;
             }
