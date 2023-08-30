@@ -7,7 +7,7 @@ namespace DesignPatternsInCSharp.Adapter.ThirdPartyApi
     {
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            Gender gender = (Gender)value;
+            Gender gender = value;
             writer.WriteValue(gender.ToString());
         }
 
