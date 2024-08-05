@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29209.62
@@ -14,7 +14,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreeterService", "GreeterSe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatternsInCSharp.Benchmarks", "DesignPatternsInCSharp.Benchmarks\DesignPatternsInCSharp.Benchmarks.csproj", "{D6F7EB79-9204-4062-A3EB-EC001F60ECAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangmanGameApp", "HangmanGame\HangmanGameApp.csproj", "{A4CB28DD-1647-4FA3-A8CF-9ECE34A525F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HangmanGameApp", "HangmanGame\HangmanGameApp.csproj", "{A4CB28DD-1647-4FA3-A8CF-9ECE34A525F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

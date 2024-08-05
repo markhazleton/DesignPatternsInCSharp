@@ -4,22 +4,12 @@ using System.Text.RegularExpressions;
 
 namespace DesignPatternsInCSharp.Memento;
 
-public class HangmanGame
+public class HangmanGame(string secretWord = "secret")
 {
-    private readonly string _secretWord;
     private const char _maskChar = '_';
     protected const int INITIAL_GUESSES = 5;
 
-    public HangmanGame(string secretWord = "secret")
-    {
-        _secretWord = secretWord.ToUpperInvariant();
-    }
-
-    public bool IsOver => this.Result > GameResult.InProgress;
-    public string CurrentMaskedWord => new string(_secretWord.Select(c => PreviousGuesses.Contains(c) ? c : _maskChar).ToArray());
-    public List<char> PreviousGuesses { get; } = new List<char>();
-    public int GuessesRemaining => INITIAL_GUESSES - PreviousGuesses.Count(c => !CurrentMaskedWord.Contains(c));
-    public GameResult Result { get; private set; }
+    private readonly string _secretWord = secretWord.ToUpperInvariant();
 
     public void Guess(char guessChar)
     {
@@ -47,4 +37,9 @@ public class HangmanGame
             Result = GameResult.Lost;
         }
     }
+    public string CurrentMaskedWord => new(_secretWord.Select(c => PreviousGuesses.Contains(c) ? c : _maskChar).ToArray());
+    public int GuessesRemaining => INITIAL_GUESSES - PreviousGuesses.Count(c => !CurrentMaskedWord.Contains(c));
+    public bool IsOver => this.Result > GameResult.InProgress;
+    public List<char> PreviousGuesses { get; } = new List<char>();
+    public GameResult Result { get; private set; }
 }
