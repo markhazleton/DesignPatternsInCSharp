@@ -1,4 +1,5 @@
-﻿#define SupportUndo
+﻿
+#define SupportUndo
 
 using DesignPatternsInCSharp.Memento;
 using System;
