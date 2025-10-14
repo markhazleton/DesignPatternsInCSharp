@@ -58,7 +58,7 @@ namespace DesignPatternsInCSharp.Singleton.v4
         }
 
         // [Fact] // this test can only be run by itself
-        public void InitializesSingletonWhenAnotherStaticMemberIsReferenced()
+        private void InitializesSingletonWhenAnotherStaticMemberIsReferenced()
         {
             Assert.Equal(0, Logger.Output().Count(log => log.Contains("Constructor")));
 
